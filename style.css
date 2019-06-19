@@ -1,79 +1,140 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Heebo', sans-serif;
-    /* font-weight: 200; */
-    margin: 0px;
+/* FONTS */
+
+h1, h2, h3, p, li {
+    color: #111;
+    font-family: "Heebo", sans-serif;
+    margin: 0;
 }
 
-.title{
+h1 {
+    font-size: 7vh;
+}
+
+h2 {
+    font-size: 4vh;
+}
+
+h3 {
+    font-size: 3vh;
+}
+
+ul li {
+    list-style-type: disc;
+}
+
+p, a, li {
+    font-weight: 500;
+    font-size: 3vh;
+}
+
+.font18 {
+    font-size: 18px;
+}
+
+.center-text {
     text-align: center;
 }
 
-.container {
-    width: 100vw;
-    height: 100vh;
+/* LAYOUT */
+
+.is-fullheight {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.page {
+    height: 100%;
+}
+
+.page-layout {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.row {
     display: flex;
     flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.evenly {
     justify-content: space-evenly;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-center {
     align-items: center;
 }
 
-.column {
-    width: 23vw;
-    height: 95%;
-    border: 2px solid #000;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    overflow: auto;
-    align-items: center;
+.wrap {
+    flex-wrap: wrap
 }
 
-.post-area {
+/* ELEMENTS */
+
+.squareBox {
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+}
+
+.squareBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    object-fit: cover;
 }
 
-.post {
-    width: 95%;
-    font-size: 1em;
-    border: 2px solid #000;
-    border-radius: 5px;
-    margin: 5px 0;
-    padding: 3px;
+.contain {
+    object-fit: contain;
 }
 
-.column h2 {
-    text-align: center;
+.column-size {
+    width: 40vh;
 }
 
-textarea {
-    width: 95%;
-    border: 2px solid #000;
-    border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    resize: vertical;
+.landing-jumbo {
+    background-color: rgba(0,0,0,0.5);
 }
 
-.submitButton {
-    font-size: 1em;
-    width: 50%;
-    background-color: #4286f4;
+.landing-jumbo * {
     color: #fff;
-    font-weight: 700;
-    padding: 5px 0;
-    margin: 5px 0;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    -webkit-appearance: none;
-    appearance: none;
+}
+
+/* MOBILE SCALING */
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 4vh;
+    }
+    h2 {
+        font-size: 3vh;
+    }
+    p, a, li {
+        font-size: 12pt;
+    }
 }
