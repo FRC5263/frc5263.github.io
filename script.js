@@ -37,26 +37,54 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
 
-    const home = document.getElementById('home');
+    const home = document.getElementById('topLayer');
+
+    const homeContainer = document.getElementById('bottomLayer');
+
     home.style.backgroundRepeat = 'no-repeat';
     home.style.backgroundSize = 'cover';
     home.style.backgroundPosition = 'center';
 
-    function setBackground(pastImage) {
-        let image = pastImage + 1;
-        if(pastImage === 4){
-            image = 0;
-        }
-        home.style.backgroundImage = `url("media/${galleryImages[image]}")`;
-        console.log('hi', image, galleryImages[image])
+    homeContainer.style.backgroundRepeat = 'no-repeat';
+    homeContainer.style.backgroundSize = 'cover';
+    homeContainer.style.backgroundPosition = 'center';
 
-        setTimeout(() => setBackground(image), 5000);
+    home.style.animationTimingFunction = 'ease-in-out';
+    home.style.animationDuration = '1s';
+
+    function setBackground(image, direction) {
+        let nextImage = image + 1;
+        if (image === 4) {
+            nextImage = 0;
+        }
+
+        //fade in / out
+
+        if (direction === "in") {
+            home.style.animationName = 'backgroundFadeIn';
+            setTimeout(() => {
+            home.style.opacity = '1';
+            homeContainer.style.backgroundImage = `url("media/${galleryImages[image]}")`;
+            }, 1000);
+            
+        } else {
+            home.style.animationName = 'backgroundFadeOut';
+            setTimeout(() => {
+                home.style.opacity = '0';
+                home.style.backgroundImage = `url("media/${galleryImages[image]}")`;
+            }, 1000);
+        }
+
+        const nextDirection = direction === 'in' ? 'out' : 'in';
+
+        setTimeout(() => setBackground(nextImage, nextDirection), 5000);
+
     }
 
-    setBackground(0)
+    setBackground(0, 'in');
 
     // const gallery = document.getElementById('gallery');
-    
+
     // const galleryImages = [
     //     'team1.jpeg',
     //     'team2.jpeg',
