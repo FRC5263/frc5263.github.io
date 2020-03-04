@@ -125,6 +125,27 @@ p, a, li {
     color: #fff;
 }
 
+.logo-large, .logo-medium, .logo-small {
+    display: inline-block;
+}
+
+.logo-large {
+    width: 30%;
+}
+
+.logo-medium {
+    width: 22%;
+}
+
+.logo-small {
+    width: 15%;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 /* MOBILE SCALING */
 
 @media only screen and (max-width: 600px) {
