@@ -29,19 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const galleryImages = [
-        'team1.jpeg',
         'team2.jpeg',
-        'team3.jpeg',
         'team4.jpeg',
         'team5.jpg',
-        'team6.jpg',
         'team7.jpg',
         'team8.jpg',
         'team9.jpg',
         'team10.jpg',
+        'team3.jpeg',
         'team11.jpg',
         'team12.jpg',
-        'team13.jpeg'
+        'team6.jpg',
+        'team13.jpeg',
+        'team1.jpeg'
     ];
 
 
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setBackground(image, direction) {
         let nextImage = image + 1;
-        if (image === 4) {
+        if (image === 12) {
             nextImage = 0;
         }
 
