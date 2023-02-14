@@ -34,6 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
         'team3.jpeg',
         'team4.jpeg',
         'team5.jpg',
+        'team6.jpg',
+        'team7.jpg',
+        'team8.jpg',
+        'team9.jpg',
+        'team10.jpg',
+        'team11.jpg',
+        'team12.jpg',
+        'team13.jpeg'
     ];
 
 
